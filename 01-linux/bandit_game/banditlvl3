@@ -1,0 +1,13 @@
+How i got the password for lvl 3:
+bandit3@bandit:~$ ls ./*
+bandit3@bandit:~$ ls
+inhere
+bandit3@bandit:~$ cd inhere/
+bandit3@bandit:~/inhere$ ls
+bandit3@bandit:~/inhere$ ls ./*
+ls: cannot access './*': No such file or directory
+bandit3@bandit:~/inhere$ man ls
+bandit3@bandit:~/inhere$ ls -a
+.  ..  ...Hiding-From-You
+bandit3@bandit:~/inhere$ cat "...Hiding-From-You"
+***********************

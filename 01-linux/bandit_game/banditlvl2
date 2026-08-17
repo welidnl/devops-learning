@@ -20,4 +20,4 @@ For more information, try '--help'.
 bandit2@bandit:~$ "./--spaces in this filename--"
 -bash: ./--spaces in this filename--: Permission denied
 bandit2@bandit:~$ cat "./--spaces in this filename--"
-7ZZ2LFrykP2zEyvBl4m3clcL7tGYJPME
+**************************
