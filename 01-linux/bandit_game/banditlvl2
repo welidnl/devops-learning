@@ -1,0 +1,23 @@
+How I worked to get the password for lvl 2, I forogot shortly how to read a file that contains spaces:
+bandit2@bandit:~$ ls
+--spaces in this filename--
+bandit2@bandit:~$ cat --spaces\in\this\filename--
+error: unexpected argument '--spacesinthisfilename--' found
+
+  tip: to pass '--spacesinthisfilename--' as a value, use '-- --spacesinthisfilename--'
+
+Usage: cat [OPTION]... [FILE]...
+
+For more information, try '--help'.
+bandit2@bandit:~$ cat '--spaces\in\this\filename--'
+error: unexpected argument '--spaces\in\this\filename--' found
+
+  tip: to pass '--spaces\in\this\filename--' as a value, use '-- --spaces\in\this\filename--'
+
+Usage: cat [OPTION]... [FILE]...
+
+For more information, try '--help'.
+bandit2@bandit:~$ "./--spaces in this filename--"
+-bash: ./--spaces in this filename--: Permission denied
+bandit2@bandit:~$ cat "./--spaces in this filename--"
+7ZZ2LFrykP2zEyvBl4m3clcL7tGYJPME
