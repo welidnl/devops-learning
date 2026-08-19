@@ -1,0 +1,37 @@
+Solution for lvl4:
+bandit4@bandit:~$ cd bandit4
+-bash: cd: bandit4: No such file or directory
+bandit4@bandit:~$ ls
+inhere
+bandit4@bandit:~$ cd inhere/
+bandit4@bandit:~/inhere$ ls -la
+total 48
+-rw-r----- 1 bandit5 bandit4   33 Jun 24 14:59 -file00
+-rw-r----- 1 bandit5 bandit4   33 Jun 24 14:59 -file01
+-rw-r----- 1 bandit5 bandit4   33 Jun 24 14:59 -file02
+-rw-r----- 1 bandit5 bandit4   33 Jun 24 14:59 -file03
+-rw-r----- 1 bandit5 bandit4   33 Jun 24 14:59 -file04
+-rw-r----- 1 bandit5 bandit4   33 Jun 24 14:59 -file05
+-rw-r----- 1 bandit5 bandit4   33 Jun 24 14:59 -file06
+-rw-r----- 1 bandit5 bandit4   33 Jun 24 14:59 -file07
+-rw-r----- 1 bandit5 bandit4   33 Jun 24 14:59 -file08
+-rw-r----- 1 bandit5 bandit4   33 Jun 24 14:59 -file09
+drwxr-xr-x 2 root    root    4096 Jun 24 14:59 .
+drwxr-xr-x 3 root    root    4096 Jun 24 14:59 ..
+bandit4@bandit:~/inhere$ ls
+-file00  -file01  -file02  -file03  -file04  -file05  -file06  -file07  -file08  -file09
+bandit4@bandit:~/inhere$ file ./*
+./-file00: data
+./-file01: data
+./-file02: OpenPGP Secret Key
+./-file03: data
+./-file04: data
+./-file05: data
+./-file06: Non-ISO extended-ASCII text, with NEL line terminators
+./-file07: ASCII text
+./-file08: data
+./-file09: data
+bandit4@bandit:~/inhere$ cd ./-file07
+-bash: cd: ./-file07: Not a directory
+bandit4@bandit:~/inhere$ cat ./-file07
+*****************************
