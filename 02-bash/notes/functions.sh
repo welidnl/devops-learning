@@ -124,3 +124,41 @@ grep "$search_term" var.sh | awk '{print $2}' # searches the names file in this 
 }
 
 search_logs "age" # searches the file stated in line 122 for the argument passed in here (age) and will then print all the lines that include this word from said file
+
+
+# Writing files----------------------------------------------
+
+write_to_file(){
+        local file_path="$1"
+        local data="$2"
+
+        echo "$data" > "$file_path" # can be used to create a new file or modify an existing file by changing its contents
+}
+
+write_to_file "log.txt" "Hello"
+
+# Check sums--------------------------------------------------
+
+# cryptographic hashes taht provide a unique fingerprint for a file toa llow for verification of authenticity
+
+calculate_md5sum(){
+    local file_path="$1"
+    md5sum "$file_path" # (md5sum) used to read out the md5sum of a file | (sha256) is another command used in place of the other one to check for checksums
+}
+
+calculate_md5sum "log.txt"
+
+#----
+
+comapre_checksums(){
+        local checksum1="$1"
+        local checksum2="$2"
+
+        if [[ "$checksum1" == "$checksum2" ]]; then
+            echo "Checksums match. File is intact"
+        else
+            echo "Checksums do not match. File is compromised"
+        fi
+}
+
+comapre_checksums "123" "123"
